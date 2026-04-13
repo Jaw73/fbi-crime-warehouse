@@ -77,6 +77,9 @@ CREATE USER IF NOT EXISTS FBI_DBT_USER
 
 GRANT ROLE FBI_DBT_ROLE TO USER FBI_DBT_USER;
 
+-- ----- 4b. Grant the dbt role to the human admin user for debugging -----
+GRANT ROLE FBI_DBT_ROLE TO USER JAY135;
+
 -- ----- 5. Verification -----
 SHOW WAREHOUSES LIKE 'FBI_CRIME_WH';
 SHOW DATABASES   LIKE 'FBI_CRIME_DB';
